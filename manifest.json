@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name": "go-highlight",
+	"description": "Add syntax highlighting for the Go codes on go.dev",
+	"version": "0.0.1",
+	"icons": {
+		"64": "icons/icon.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.go.dev/*"
+			],
+			"js": [
+				"content_script.js"
+			],
+			"css": [
+				"style.css"
+			]
+		}
+	]
+}
